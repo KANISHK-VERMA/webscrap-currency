@@ -31,6 +31,7 @@ response = requests.get(url)
 data = response.text
 soup = BeautifulSoup(data, 'html.parser')
 countries = soup.find_all("td", {"class":""})
+
 Other_currency = []
 for country in range(10, len(countries)):
     Other_currency.append(countries[country].text)
